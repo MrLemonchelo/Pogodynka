@@ -41,7 +41,7 @@ const weatherInfo = (info) => {
     wind.textContent = "Wiatr: " +(info.wind.speed) + " m/s";
     ErrorMessage.textContent = "";
     Teraz.textContent = (today.toLocaleDateString("en-UK"));
-    weatherIcon.src=`http://openweathermap.org/img/wn/${info.weather[0].icon}@2x.png`;
+    weatherIcon.src=`https://openweathermap.org/img/wn/${info.weather[0].icon}@2x.png`;
 
     if (info.main.temp >= 15) {
         zmienne_tlo.style.backgroundImage = "url(../img/8.jpg)";
