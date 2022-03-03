@@ -60,7 +60,7 @@ const weatherInfo = (info) => {
 //
 
 const getWeatherBySearch = (city) => {
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=PL&appid=${API_KEY}`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=PL&appid=${API_KEY}`;
      fetch(URL)
      .then((res) => res.json())
      .then((res) => weatherInfo(res))
@@ -73,7 +73,7 @@ const getWeatherBySearch = (city) => {
 // do nie odzpowiedź z naszego fletch/then
 const getWeatherByLocation = (coords) => {
     console.log(coords)
-    const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&units=metric&lang=PL&appid=${API_KEY}`
+    const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&units=metric&lang=PL&appid=${API_KEY}`
     fetch(URL)
         .then((res) => res.json())
         .then((res) => weatherInfo(res))
