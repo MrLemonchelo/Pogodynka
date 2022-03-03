@@ -1,0 +1,89 @@
+.wrapper_main {
+    background-color: #343d4b;
+    width: 100%;
+    height: 100vh;
+    @include flex(null, center, center, null);
+    flex-wrap: wrap;
+
+    @media (max-width:550px) {
+        @include flex(column,center,center,null);
+        height: 100vh;
+    }
+}
+.weather_left {
+    background-color: rgb(69, 145, 175);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    padding: 25px 15px 25px 30px;
+    background-size:cover; 
+    @include flex (column, null, null, null);
+
+    @media (max-width:550px) {
+        @include flex(column, center,center,null);
+        width: 70%
+    }
+
+    i {
+        font-size: 60px;
+    }
+    .day_date {
+        flex: 1;
+
+        h2 {
+            color: white;
+        }
+        h3 {
+            margin-top: 5px;
+        }
+    }
+    .icon {
+        @media (max-width:550px) {
+            @include flex(column,center,center,null)
+        }
+    }
+    .temp {
+        @media (max-width:550px) {
+            @include flex(column,center,center,null)
+        }
+        h3 {
+            font-size: 33px;
+        }
+    }
+
+}
+.weather_right {
+    background-color: #222831;
+    color: #ffffff;
+    height: 300px;
+    min-width: 250px;
+    left: 100px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    @include flex(column,center,center,5px);
+
+    @media (max-width:550px) {  
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 0px;
+        width: 55%;
+    }
+
+    #CitySearch {
+        width: 90%;
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+    }
+    ::placeholder {
+        text-align: center;
+    }
+    button {
+        @include Btn;
+    }
+    input {
+        text-align: center;
+    }
+}
